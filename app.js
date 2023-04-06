@@ -109,6 +109,22 @@ botui.message.add({
         loading: true,
         content:'I have processed your request. Please make sure to return the older edition. Is there anything else you need?'
     });
+ }).then(function(){
+    return botui.action.text({
+        action: {
+          placeholder: 'Enter your message.'
+        }
+    
+    });
+}).then(function (res) { 
+    console.log(res.value);
+    response.push(res.value);
+}).then(function(){
+    return botui.message.add({
+        delay:3000,
+        loading: true,
+        content:'I cannot process your message. Please select one.'
+    });
  ).then(function(){
     return botui.action.button({
         action: [
@@ -137,5 +153,5 @@ botui.message.add({
 });
 
 function sendcomplete(){
-    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2], "text4":response[3], "text5":response[4], "text6":response[5]}, "*");
+    window.parent.postMessage({"message": "completed","text1":response[0],"text2":response[1],"text3":response[2], "text4":response[3], "text5":response[4], "text6":response[5], "text7":response[6]}, "*");
 };
