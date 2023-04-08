@@ -52,8 +52,8 @@ botui.message.add({
           { text: 'Need a different version or edition',
             value: 'Need a different version or edition' 
           },
-          { text: 'Incorrect item delivered',
-            value: 'Incorrect item delivered'
+          { text: 'Decided to switch to an e-book version',
+            value: 'Decided to switch to an e-book version'
           }
         ]
     });
@@ -128,8 +128,8 @@ botui.message.add({
 }).then(function(){
     return botui.action.button({
         action: [
-          { text: 'Express shipping ($15)',
-            value: 'Express shipping ($15)' 
+          { text: 'Express shipping for the delivery ($15)',
+            value: 'Express shipping for the delivery ($15)' 
           },
           { text: 'Subscribe to the newsletter for discounts and offers',
             value: 'Subscribe to the newsletter for discounts and offers' 
