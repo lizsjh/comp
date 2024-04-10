@@ -47,6 +47,7 @@ botui.message.add({
     return botui.action.select({
         delay: 50,
         action: {
+            placeholder: 'Select Here',
             multipleselect: true,
             options: [
           { text: 'Damage in the item',
@@ -58,7 +59,7 @@ botui.message.add({
             ],
         button: {
             icon: 'check',
-            label: 'OK'
+            label: 'Done'
             }
         }
     });
