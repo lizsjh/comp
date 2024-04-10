@@ -45,6 +45,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.action.button({
+        isMultiSelect: true,
         action: [
           { text: 'Damage in the item',
             value: 'Damage in the item' 
