@@ -44,9 +44,11 @@ botui.message.add({
         content:'I do not understand what you said. Can you choose one of the options below?'
     });
 }).then(function(){
-    return botui.action.button({
-        multipleselect : true,
-        action: [
+    return botui.action.select({
+        delay: 50,
+        action: {
+            multipleselect: true,
+            options: [
           { text: 'Damage in the item',
             value: 'Damage in the item' 
           },
@@ -55,12 +57,12 @@ botui.message.add({
           },
           { text: 'Decided to switch to an e-book version',
             value: 'Decided to switch to an e-book version'
-          },
+          }],
         button: {
             icon: 'check',
             label: 'OK'
             }
-        ]
+        }
     });
 }).then(function (res) { 
     console.log(res.value);
