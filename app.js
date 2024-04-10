@@ -50,14 +50,12 @@ botui.message.add({
             multipleselect: true,
             options: [
           { text: 'Damage in the item',
-            value: 'Damage in the item' 
-          },
+            value: 'Damage in the item'},
           { text: 'Need a different version or edition',
-            value: 'Need a different version or edition' 
-          },
+            value: 'Need a different version or edition'},
           { text: 'Decided to switch to an e-book version',
-            value: 'Decided to switch to an e-book version'
-          }],
+            value: 'Decided to switch to an e-book version'},
+            ],
         button: {
             icon: 'check',
             label: 'OK'
