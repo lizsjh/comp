@@ -45,7 +45,7 @@ botui.message.add({
     });
 }).then(function(){
     return botui.action.button({
-        isMultiSelect: true,
+        multipleselect : true,
         action: [
           { text: 'Damage in the item',
             value: 'Damage in the item' 
@@ -55,7 +55,11 @@ botui.message.add({
           },
           { text: 'Decided to switch to an e-book version',
             value: 'Decided to switch to an e-book version'
-          }
+          },
+        button: {
+            icon: 'check',
+            label: 'OK'
+            }
         ]
     });
 }).then(function (res) { 
